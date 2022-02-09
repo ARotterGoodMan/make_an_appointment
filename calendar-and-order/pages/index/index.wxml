@@ -1,0 +1,13 @@
+<yycalendar 
+    show='{{isShow}}'
+    beginTime="{{beginTime}}" 
+    endTime="{{endTime}}" 
+    timeGap="{{timeGap}}" 
+    themeColor="{{themeColor}}" 
+    showOverdue="{{showOverdue}}" 
+    calendarType="{{calendarType}}"
+    days="{{days}}"
+    time="{{time}}"
+    confirmClick="{{confirmClick}}"
+    bind:yybindchange="_yybindchange" 
+    bind:yybindhide="_yybindhide"/>

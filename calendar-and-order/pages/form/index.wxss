@@ -1,0 +1,9 @@
+/**index.wxss**/
+.submit{
+    width: 95%;
+    height: 88rpx;
+    background-color: #ffd00a;
+}
+
+
+

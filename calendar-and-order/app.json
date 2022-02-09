@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/form/index",
+    "pages/logs/logs"
+  ],
+  "plugins": {
+    "myPlugin": {
+      "version": "2.2.1",
+      "provider": "wx6b6cb15df2836ebe"
+    },
+      "form-plugin": {
+        "version": "1.0.1",
+        "provider": "wxf923bff1f610cf13"
+      }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "时间预定",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
