@@ -1,4 +1,5 @@
-var plugin = requirePlugin("myPlugin")
+const plugin = requirePlugin("myPlugin")
+const app = getApp()
 
 Page({
   onLoad: function () {
@@ -14,7 +15,6 @@ Page({
     calendarType: 'yytimes',
     days: 0,    //默认展示某天。正整数，0为当天     2.2.1
     time: '08:30',    //默认选中某天的某时刻,过期无效    2.2.1
-    confirmClick:true //确认
   },
 
   // 点击显示插件
@@ -25,31 +25,34 @@ Page({
   },
 
   _yybindchange: function (e) {
-    var data = e.detail
+    const data = e.detail
     console.log(data)
-    // if(){}
-    // wx.redirectTo({
-    //   url: '../form/index',
-    // })
-    wx.cloud.callFunction({
-      name:"tomail",
-      data:{
-        content:""
-      },
-      success(res){
-        console.log("ok");
-      },fail(res){
-        console.log("no");
-      }
-    })
+    app.globalData.clickDate=data.date
+    console.log(data.date)
+    if (data.time === "") {
+      wx.showToast({
+        title: "你还没有选择预约时间",
+        icon: 'none',
+        duration: 1500
+      })
+      this.setData({
+        isShow: true,
+      })
+    } else {
+      wx.redirectTo({
+        url: '../form/index',
+      })
+    }
+
+
 
   }
-  }
 
+  ,
   _yybindhide: function () {
     console.log('隐藏')
-     this.setData({
-      isShow: true,
-    })
+    // this.setData({
+    //   isShow: true,
+    // })
   },
 })

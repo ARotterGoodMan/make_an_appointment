@@ -40,6 +40,9 @@ App({
   },
   globalData: {
     userInfo: null,
-    db:null
+    db:null,
+    clickTeacher:"",
+    clickDate:"",
+    fromData:null
   }
 })

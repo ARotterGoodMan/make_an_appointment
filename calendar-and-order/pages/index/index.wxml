@@ -1,4 +1,7 @@
-<yycalendar 
+
+
+
+<yycalendar
     show='{{isShow}}'
     beginTime="{{beginTime}}" 
     endTime="{{endTime}}" 
@@ -8,6 +11,5 @@
     calendarType="{{calendarType}}"
     days="{{days}}"
     time="{{time}}"
-    confirmClick="{{confirmClick}}"
     bind:yybindchange="_yybindchange" 
     bind:yybindhide="_yybindhide"/>
